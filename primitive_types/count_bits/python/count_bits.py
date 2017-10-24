@@ -2,7 +2,12 @@
 
 
 def count_bits(num):
+
     counter = 0
+    if not isinstance(num, int) or num < 0:
+        print("Unexcepted value of num: {}".format(num))
+        return counter
+
     while num:
         counter += num & 1
         num = num >> 1
@@ -11,11 +16,4 @@ def count_bits(num):
 
 if __name__ == "__main__":
     print(count_bits(15333333333442434))
-    count = 0
-    for i in list(bin(15333333333442434)):
-        try:
-            if int(i) == 1:
-                count += 1
-        except:
-            continue
-    print(count)
+
