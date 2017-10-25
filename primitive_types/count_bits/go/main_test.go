@@ -4,19 +4,19 @@ import "testing"
 
 func TestCountBits(t *testing.T) {
 
-    if CountBits(0) != 0 {
-        t.Error("Expected 0")
+    if res := CountBits(0); res != 0 {
+        t.Errorf("Expected 0 Received %d", res)
     }
 
-    if CountBits(-1) != 0 {
-        t.Error("Expected 0")
+    if res := CountBits(-1); res != 0 {
+        t.Errorf("Expected 0 Received %d", res)
     }
 
-    if CountBits(15) != 4 {
-        t.Error("Expected 4")
+    if res := CountBits(15); res != 4 {
+        t.Errorf("Expected 4 Received %d", res)
     }
 
-    if CountBits(15333333333442434) != 34 {
-        t.Error("Expected 34")
+    if res := CountBits(15333333333442434); res != 34 {
+        t.Errorf("Expected 34 Received %d", res)
     }
 }
